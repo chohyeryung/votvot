@@ -1,24 +1,3 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# votvot 🤖
+*** Busy Busy modern Society ! For everyone vote app ***
+*** 사소한 것 하나까지 결정하기 어려운 현대인들을 위한 투표 웹 서비스 ***
