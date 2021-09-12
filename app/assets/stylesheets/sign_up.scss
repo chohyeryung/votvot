@@ -1,0 +1,77 @@
+.userCon {
+    width: 28.4vw;
+    height: 64.3vh;
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+    border: solid 1px #cecece;
+    background-color: #fff;
+    margin: 0 auto;
+    position: relative;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    margin-bottom: 15vh;
+    margin-top: 15vh;
+
+    h2 {
+        color: #000000;
+        font-size: 2em;
+    }
+
+    .sign_form {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 1.3em;
+       
+        label {
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        .required {
+            font-size: 1em;
+            color: red;
+        }
+
+        input {
+            width: 21.6vw;
+            padding: 2%;
+            border: 1px solid #cacaca;
+            border-radius: 3px;
+        }
+
+        .pass_con {
+            margin-top: 5px;
+        }
+
+        .submit {
+            width: 17.2vw;
+            border-radius: 20px;
+            border: 1px solid #60f;
+            color: #60f;
+            background-color: transparent;
+            margin: 10% 5% 0 10%;
+        }
+
+        .submit:hover {
+            background-color: #60f;
+            color: #ffffff;
+        }
+    }
+
+    
+}
+
+.sign_img {
+    width: 60px;
+    position: absolute;
+    top: 26%;
+    left: 50%;
+    transform: translate(-50%, -26%);
+    z-index: 1;
+    background-color: white;
+}

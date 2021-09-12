@@ -1,0 +1,29 @@
+<%= form_with(model: subject) do |form| %>
+  <% if subject.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(subject.errors.count, "error") %> prohibited this subject from being saved:</h2>
+
+      <ul>
+        <% subject.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+   <div class="field d-none">
+    <%= form.label :post_id %>
+    <%= form.number_field :post_id, type: :hidden %>
+  </div>
+
+  <div class="subject_con">
+    <div class="field d-inline">
+      <%= form.label :sub_cons %>
+      <%= form.text_field :sub_con, :required => true, placeholder: '항목을 입력하세요', class: 'subject_input' %>
+    </div>
+
+    <div class="actions d-inline">
+      <%= form.submit "#{message}", class: 'create_btn' %>
+    </div>
+  </div>
+<% end %>

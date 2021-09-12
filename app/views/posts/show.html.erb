@@ -1,0 +1,80 @@
+<div class="post_show">
+  <div class="post">
+
+    <div class="title">
+      <%= @post.title %>
+    </div>
+
+    <div class="hot">
+      <% if current_user.is_like? (@post) %>
+        <form action="/posts/<%= @post.id %>/like" method="post">
+          <button class="full_hot like_btn"></button>
+        </form>
+      <% else %>
+        <form action="/posts/<%= @post.id %>/like" method="post">
+          <button class="empty_hot like_btn"></button>
+        </form>
+      <% end %>
+    </div>
+    <div class="info">
+      <div class="left">
+        <%# <%= @post.user.profile %> 
+        <%= @post.user.nickname %> | 
+
+        <%
+          today = Date.current
+          post_date = Date.new(@post.created_at.year, @post.created_at.month, @post.created_at.day, @post.created_at.hour)
+        %>
+        <%= (today - post_date).floor %>일전
+      </div>
+
+      <div class="right">
+        <%# 핫해요 %>
+        <img src="/images/post_show/like_count.png" width="10px">
+        <%= @post.likes.count%>
+
+        조회수
+        <%= "#{@post.unique_impression_count}" %>
+
+        댓글
+        <%= @post.comments.count %>
+      </div>
+    </div>
+
+    <br>
+    <hr>
+
+    <div class="content">
+      <% if @post.photo.attached? %>
+        <%= image_tag @post.photo, class: 'photo' %>
+      <% end %>
+      <%= @post.content %>
+    </div>
+
+    <% if @post.subjects %>
+      <div class="subjects">
+        <%= form_with url: "/vote", method: :get do |f| %>
+          <% @post.subjects.each do |subject| %>
+              <div class="sub_box">
+                <%= subject.sub_con %> <%= f.radio_button :id, subject.id, class: 'radio' %> <%= subject.votes %>
+              </div>
+          <% end %>
+          <%= f.submit "투표하기", class: 'submit_btn' %>
+        <% end %>
+      </div>
+
+    <% end %>
+
+    <% if(current_user.id == @post.user.id) %>
+      <%= link_to '편집', edit_post_path(@post) %>
+      <%= link_to '삭제', @post, method: :delete, data: { confirm: '해당 게시글을 삭제하시겠습니까?' } %>
+    <% end %>
+  </div>
+
+  <div class="comments">
+    댓글 총 <%= @post.comments.count %>개
+    <hr>
+
+    <%= render template: "comments/index", :locals => { comments: @post.comments  } %>
+  </div>
+</div>

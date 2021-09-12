@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://localhost:3000/posts/55/subjects/new -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Required meta tags -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="./VotVot_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>VotVot</title>
+
+    <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="THKhefsuATpFoW5n8GR_JC5o6Pd5HnqK0dqpoO97R-W13UsadvjQ3IGf7X-ghYn0t385-sLBdfeHxtLjxZDg0w">
+    
+
+    <link rel="stylesheet" media="all" href="./VotVot_files/application.debug-c434d12da478f14560cf4a740136269b01cc5aa399ba0b85443727d258b36cec.css" data-turbolinks-track="reload">
+    <script src="./VotVot_files/application-c611f089b2597a36bf8f.js" data-turbolinks-track="reload"></script>
+  </head>
+  <body>
+    
+    <div class="header">
+  <div class="headerLeft">
+    <a href="http://localhost:3000/topten">🔥핫해요</a>
+    <a href="http://localhost:3000/posts">실시간</a>
+    <a href="http://localhost:3000/posts/new">글쓰기</a>
+  </div>
+  <a href="http://localhost:3000/"><img width="50px;" src="./VotVot_files/logo.png"></a>
+  <div class="headerRight">
+      <!-- user_signed_in : 유저가 로그인 되어있는지 검사 -->
+      <div class="dropdown">
+          <img class="profile" src="./VotVot_files/back.jpeg">
+        <a href="http://localhost:3000/posts/55/subjects/new">부리부리대마왕2님</a> <!-- current_user : 현재 유저에 대한 모델 정보 -->
+        <div class="dropdown-content">
+          <p><a href="http://localhost:3000/my_page">마이페이지</a></p>
+          <hr>
+          <p><a rel="nofollow" data-method="delete" href="http://localhost:3000/users/sign_out">로그아웃</a></p>
+        </div>
+      </div>
+  </div>
+</div>
+    <!-- 
+      <img class="banner_img" src="/images/banner.png" />
+    -->
+    <div class="con">
+      
+<div class="new container">
+    <h1>Step 2</h1>
+
+
+    <form action="http://localhost:3000/subjects" accept-charset="UTF-8" method="post"><input type="hidden" name="authenticity_token" value="THKhefsuATpFoW5n8GR_JC5o6Pd5HnqK0dqpoO97R-W13UsadvjQ3IGf7X-ghYn0t385-sLBdfeHxtLjxZDg0w">
+
+  <div class="field d-none">
+    <label for="subject_votes">Votes</label>
+    <input value="0" type="hidden" name="subject[votes]" id="subject_votes">
+  </div>  
+
+   <div class="field d-none">
+    <label for="subject_post_id">Post</label>
+    <input value="55" type="hidden" name="subject[post_id]" id="subject_post_id">
+  </div>
+
+  <div class="subject_con">
+    <div class="field d-inline">
+      <label for="subject_sub_cons">Sub cons</label>
+      <input required="required" placeholder="항목을 입력하세요" class="subject_input" type="text" name="subject[sub_con]" id="subject_sub_con">
+    </div>
+
+    <div class="actions d-inline">
+      <input type="submit" name="commit" value="생성" class="create_btn" data-disable-with="생성">
+    </div>
+  </div>
+</form>
+
+    <a class="submit_btn" href="http://localhost:3000/posts/55">완료</a>
+</div>
+    </div>
+
+    <div class="footer">
+    <div class="footerItem">
+        <img src="./VotVot_files/logo.png" width="40px">
+        <p class="footerLink">
+            <a href="https://www.naver.com/">이용약관</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+            <a href="https://www.google.com/">개인정보처리방침</a>
+        </p>
+        <p class="footerAddress">(08821) 서울시 관악구 호암로 546</p>
+    </div>
+</div>
+  
+
+</body></html>

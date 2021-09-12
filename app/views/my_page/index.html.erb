@@ -1,0 +1,43 @@
+<div class="myPage">
+    <%# 상단 배너 %>
+    <div class="banner">
+    </div>
+
+    <div class="user">
+        <%# 왼쪽 사용자 정보 %>
+        <div class="userInfo">
+
+            <div class="info">
+                <%# 프로필 사진 %>
+                <div class="box">
+                    <% if current_user.profile.attached? %>
+                        <%= image_tag current_user.profile, class: 'img' %>
+                    <% else %>
+                        <%= image_tag '/images/back.jpeg', class: 'img' %>
+                    <% end %>
+                </div>
+
+                <%# 프로필 사진 외 텍스트들 %>
+                <div class="text">
+                    <span class="nickname"><%= current_user.nickname %></span>
+                    <span style="font-size: 2rem">님</span>
+                    <p class="email"><%= current_user.email %></p>
+                </div>
+            </div>
+
+            <div class="button"><%= button_to '회원정보수정', edit_user_registration_path, method: 'get' %></div>
+        </div>
+
+        <%# 오른쪽 내가 쓴 게시글 & 내가 투표한 게시글 %>
+        <div class="my">
+            <%# 내가 쓴 게시글 %>
+            <div class="myPosts">
+            </div>
+
+            <%# 내가 투표한 게시글 %>
+            <div class="myVotes">
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,48 @@
+<%= form_with(model: post) do |form| %>
+  <% if post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+        <% post.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="post_form">
+
+    <div class="field">
+      <% form.label :title %>
+      <%= form.text_field :title, placeholder: '제목', class: 'title' %>
+    </div>
+
+    <div class="field">
+      <% form.label :content %>
+      <%= form.text_area :content, placeholder: '내용을 작성해주세요.', class: 'content' %>
+    </div>
+
+    <div class="field">
+      <% form.label :photo, '사진 추가' %>
+      <%= form.file_field :photo, placeholder: '사진 첨부' %>
+    </div>
+
+    <div class="field">
+    <%= form.number_field :user_id,
+        id: :post_user_id, value: current_user.id, type: :hidden %>
+    </div>
+    
+    <%# <%= current_user.inspect %>
+
+    <div class="btn_group">
+      <div class="actions d-inline">
+        <%= link_to '취소', root_path , class: 'cancel_btn' %>
+      </div>
+      <div class="actions d-inline">
+        <%= form.submit '다음', class: 'post_submit_btn' %>
+      </div>
+    </div> 
+
+  </div>
+<% end %>

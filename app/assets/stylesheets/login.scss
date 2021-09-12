@@ -1,0 +1,70 @@
+.userCon {
+
+    .login_form {
+
+        font-size: 1.3em;
+       
+        label {
+            margin-bottom: 5px;
+            margin-top: 10px;
+        }
+
+        input {
+            width: 21.6vw;
+            padding: 2%;
+            outline: 0;
+            border-width: 0 0 1px;
+            border-color: #cacaca;
+            text-indent: 30px;
+        }
+
+        .email {
+            background-image: url(/images/user.png);
+            background-position: 5px center;
+            background-size: 20px;
+            background-repeat: no-repeat;
+        }
+
+        .password {
+            background-image: url(/images/lock.png);
+            background-position: 5px center;
+            background-size: 22px;
+            background-repeat: no-repeat;
+        }
+
+        .check_box{
+            width: auto;
+        }
+
+        .check {
+            margin-left: 8px;
+            margin-top: 5px;
+            color: #9f9f9f;
+        }
+
+        .submit {
+            width: 17.2vw;
+            border-radius: 20px;
+            border: 1px solid #60f;
+            color: #60f;
+            background-color: transparent;
+            margin: 25% 5% 0 10%;
+            cursor: pointer;
+            text-indent: 0;
+        }
+
+        .submit:hover {
+            background-color: #60f;
+            color: #ffffff;
+        }
+
+        .go_regi {
+            text-align: center;
+            margin-top: 20px;
+            color: #000;
+            text-decoration: none;
+        }
+    }
+
+    
+}

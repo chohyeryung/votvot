@@ -1,0 +1,28 @@
+<div class="header">
+  <div class="headerLeft">
+    <%= link_to '🔥핫해요', '/topten' %>
+    <%= link_to '실시간', posts_path %>
+    <%= link_to '글쓰기', new_post_path %>
+  </div>
+  <a href="<%= root_path %>"><%= image_tag("/images/logo.png", width: '50px;') %></a>
+  <div class="headerRight">
+    <% if user_signed_in? %>  <!-- user_signed_in : 유저가 로그인 되어있는지 검사 -->
+      <div class="dropdown">
+        <% if current_user.profile.attached? %>
+          <%= image_tag current_user.profile, class: 'profile' %>
+        <% else %>
+          <%= image_tag '/images/back.jpeg', class: 'profile' %>
+        <% end %>
+        <%= link_to current_user.nickname+'님' %> <!-- current_user : 현재 유저에 대한 모델 정보 -->
+        <div class="dropdown-content">
+          <p><%= link_to '마이페이지', '/my_page' %></p>
+          <hr>
+          <p><%= link_to '로그아웃', destroy_user_session_path, method: :delete %></p>
+        </div>
+      </div>
+    <% else %>
+      <%= link_to '로그인', new_user_session_path %>
+      <%= link_to '회원가입', new_user_registration_path %>
+    <% end %>
+  </div>
+</div>

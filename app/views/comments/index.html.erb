@@ -1,0 +1,27 @@
+<div class="comment_index">
+  <% if(comments) %>
+    <% comments.each do |comment| %>
+      <% 
+        user_id = comment.user_id
+        comm_user = User.find(user_id)
+      %>
+      <strong><%= comm_user.nickname %></strong><br>
+      <%= comment.content %>
+      <% if(comment.user_id == current_user.id) %>
+        <div class="crud">
+          <%= link_to '수정', edit_comment_path(comment) %>
+          <%# javascript 사용해서 버튼 누르면 수정 폼 나오게
+          <script>
+            수정 button action
+          </script> 
+          %>
+          <%= link_to '삭제', comment, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+      <% end %>
+      <hr>
+    <% end %>
+  <% else %>
+    댓글이 없습니다! 첫 댓글을 남겨보세요!
+  <% end %>
+  <%= render 'comments/form', comment: Comment.new %>
+</div>

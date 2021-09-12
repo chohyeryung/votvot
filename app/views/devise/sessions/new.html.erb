@@ -1,0 +1,40 @@
+<img src="/images/logo.png" class="sign_img" />
+
+<div class="userCon">
+
+  <h2>로그인</h2>
+
+  <div class="login_form">
+
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <% f.label :email %><br />
+        <%= f.email_field :email, autofocus: true, autocomplete: "off", placeholder: "이메일", class: 'email' %>
+      </div>
+
+      <div class="field">
+        <% f.label :password %><br />
+        <%= f.password_field :password, autocomplete: "off", placeholder: "비밀번호", class: 'password' %>
+      </div>
+
+      <% if devise_mapping.rememberable? %>
+        <div class="field check">
+          <%= f.check_box :remember_me, class: 'check_box' %>
+          <%= f.label :remember_me, "로그인 상태 유지", class: 'd-inline' %>
+        </div>
+      <% end %>
+
+      <div class="actions">
+        <%= f.submit "로그인", class: 'submit' %>
+      </div>
+
+      <div class="go_regi">
+        <span style="color: #9f9f9f">회원이 아니신가요?</span> <%= link_to '회원가입', new_user_registration_path, class: 'go_regi' %>
+      </div>
+    <% end %>
+
+  </div>
+
+</div>
+
+

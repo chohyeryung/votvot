@@ -1,0 +1,92 @@
+<div class="myPage">
+  <%# 상단 배너 %>
+  <div class="banner">
+  </div>
+
+  <div class="user">
+    <%# 왼쪽 사용자 정보 %>
+    <div class="userInfo">
+
+        <div class="info">
+            <%# 프로필 사진 %>
+            <div class="box">
+                <img class="img">
+            </div>
+
+            <%# 프로필 사진 외 텍스트들 %>
+            <div class="text">
+            
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+                <%= render "devise/shared/error_messages", resource: resource %>
+
+                <%# 닉네임 수정 %>
+                <div class="nickname">
+                  <%= f.text_field :nickname, autofocus: true, autocomplete: "off", placeholder: "닉네임", size: '7' %>
+                  <span style="font-size: 2rem; font-weight: normal">님</span>
+                </div>
+
+                <p class="email"><%= current_user.email %></p>
+
+                <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                  <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+                <% end %>
+
+                <%# 변경할 비밀번호 %>
+                <div class="field">
+                  <em>비밀번호를 변경하고 싶다면 입력</em><br>
+                  <%= f.password_field :password, autocomplete: "off", placeholder: "변경할 비밀번호" %>
+                  <% if @minimum_password_length %>
+                    <br />
+                    <em><%= @minimum_password_length %>characters minimum</em>
+                  <% end %>
+
+                  <%# 버그 : 비밀번호를 변경하지 않기 위해 입력을 안하면 입력하라고 오류 메시지 발생 %>
+                  <%# 방법1. 만약 비밀번호 필드가 비워져있다면 필드에 기존 비밀번호 채워넣기 %>
+                  
+                </div>
+
+                <%# 비밀번호 확인 %>
+                <div class="field">
+                  <%= f.password_field :password_confirmation, autocomplete: "off", placeholder: "비밀번호 확인" %>
+                </div>
+
+                <%# 현재 비밀번호 %>
+                <div class="field">
+                  <em>변경사항을 저장하기 위해 현재 비밀번호가 필요합니다</em><br />
+                  <%= f.password_field :current_password, autocomplete: "off", placeholder: "현재 비밀번호" %>
+                </div>
+
+                 <div class="field">
+                  <% f.label :profile %>
+                  <%= f.file_field :profile %>
+                </div>
+
+                <div class="actions">
+                  <%= f.submit "확인" %>
+                </div>
+
+                <%= link_to "취소", :back %>
+              
+              <% end %>
+
+              <%# 회원 탈퇴 %>
+              <p style="font-size: 1.5rem; margin-top: 10vh;">회원 탈퇴</p>
+              <p><%= button_to "탈퇴", registration_path(resource_name), data: { confirm: "탈퇴하시겠습니까?" }, method: :delete %></p>
+            
+            </div>
+        </div>
+
+    </div>
+
+    <%# 오른쪽 내가 쓴 게시글 & 내가 투표한 게시글 %>
+    <div class="my">
+        <%# 내가 쓴 게시글 %>
+        <div class="myPosts">
+        </div>
+
+        <%# 내가 투표한 게시글 %>
+        <div class="myVotes">
+        </div>
+    </div>
+  </div>
+</div>

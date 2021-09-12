@@ -1,0 +1,38 @@
+.landingContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 15vh;
+    margin-bottom: 15vh;
+
+    .item {
+        width: 45%;
+        margin-top: 25vh;
+        margin-left: 4vh;
+        margin-right: 4vh;
+    
+        img {
+            width: 80%;
+            margin: 0 10% 0 10%;
+        }
+
+        .topic {
+            font-size: 4vw;
+        }
+        
+        .detail {
+            font-weight: lighter;
+            margin-top: 3vh;
+            font-size: 1.5vw;
+            color: #727272;
+        }
+    
+    }
+    .item:nth-child(even) {
+        margin-left: auto;
+        text-align: right;
+    }
+    .item:nth-child(1), .item:nth-child(2) {
+        margin-top: 5vh;
+    }
+}

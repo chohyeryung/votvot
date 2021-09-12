@@ -1,0 +1,39 @@
+.post_form {
+
+    input {
+        width: 100%;
+        outline: 0;
+        border-width: 0 0 1px;
+        border-color: #cacaca;
+        text-indent: 5px;
+    }
+    textarea {
+        width: 100%;
+        outline: 0;
+        border-width: 0;
+        text-indent: 5px;
+    }
+
+    .btn_group {
+        text-align: right;
+        margin-top: 50px;
+
+        .post_submit_btn {
+            width: auto;
+            background-color: #60f;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 30px;
+        }
+    
+        .cancel_btn {
+            width: auto;
+            background-color: #fff;
+            color: #60f;
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: 1px solid #60f;
+        }
+    }
+
+}

@@ -1,0 +1,44 @@
+<%= image_tag '/images/banner.png', class: 'banner_img' %>
+
+<div class="top_ten post_index">
+    <div class="post_container">
+      <% @posts.each.with_index(1) do |post, index| %>
+        <div class="post">
+          <%= image_tag '/images/bookmark.png', class: 'bookmark_icon' %>
+          <h6 class="number"><%= index %></h6>
+          <% if post.photo.attached? %>
+            <%= image_tag post.photo, class: 'photo_con' %>
+          <% else %>
+            <%= image_tag '/images/back.jpeg', class: 'photo_con' %>
+          <% end %>
+          <div class="text_con">
+            <h5><%= link_to post.title, post %></h5><br>
+            <h6><%= post.content %></h6><br>
+            <div class="info_con">
+              <div class="count_con">
+                <div class="like_con">
+                  <%= image_tag '/images/post_show/like_count.png', class: 'like_icon' %>
+                  <% if post.likes_count %>
+                    <%= post.likes_count %>
+                  <% else %>
+                    0
+                  <% end %>
+                </div>&nbsp;&nbsp;
+                <div class="comment_con">
+                  <%= image_tag '/images/post_show/comment.png', class: 'comment_icon' %>
+                  <%= post.comments.count %>
+                </div>
+              </div>
+              <h6><%= post.user.nickname %>님</h6>
+            
+            </div>
+          </div>
+          <!-- 
+            <td><%= link_to 'Show', post %></td>
+            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          -->
+        </div>
+      <% end %>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+.post_show {
+    background-color: #f6f6f6;
+
+    .post {
+        background-color: white;
+        margin: 4vh 15vh 0vh;
+        padding: 0 10vh;
+        padding-bottom: 20vh;
+
+        .title {
+            display: inline;
+        }
+
+        .hot {
+            float: right;
+
+            .like_btn {
+                background-position: center;
+                background-size: 100%;
+                width: 20px; height: 28px;
+                background-repeat: no-repeat;
+                border: none;
+                background-color: transparent;
+            }
+
+            .full_hot {
+                background-image: url(/images/post_show/full_hot.png);
+            }
+
+            .empty_hot {
+                background-image: url(/images/post_show/empty_hot.png);
+            }
+        }
+
+        .info {
+            margin-top: 5vh;
+
+            color: #a1a1a1;
+
+            .left {
+                float: left;
+            }
+
+            .right {
+                float: right;
+            }
+        }
+
+        hr {
+            margin: 1vh 0vh 4vh;
+        }
+
+        .content {
+            margin: 3vh 0;
+        }
+
+        .subjects {
+    
+            .sub_box {
+                border: solid 1px black;
+                padding: 1vh;
+                margin: 1vh 0;
+
+                .radio {
+                    float: right;
+                }
+            }
+            .sub_box:hover, .sub_box > .radio:checked {
+                background-color: #f0e6ff;
+            }
+        }
+    
+        .submit_btn {
+            width: auto;
+            background-color: #60f;
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 30px;
+            border: none;
+            float: right;
+            margin-top: 5vh;
+        }
+    }
+
+    .comments {
+        background-color: white;
+        margin: 0vh 15vh;
+        padding: 0vh 10vh;
+    }
+}

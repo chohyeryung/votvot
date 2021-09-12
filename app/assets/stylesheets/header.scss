@@ -1,0 +1,35 @@
+.header {
+    padding: 3vh 13vh 3vh 13vh;
+    box-shadow: 0 3px 5px #DCDCDC;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+
+    a {
+        margin: 0 3vh 0 1vh;
+        color: black;
+        text-decoration-line: none;
+    }
+    a:hover {
+        color: #6600ff;
+    }
+
+    .headerLeft, .headerRight {
+        width: 300px;
+    }
+    .headerRight {
+        text-align: right;
+
+        button {
+            background-color: white;
+            border: none;
+        }
+
+        .profile {
+            width: 25px; height: 25px;
+            border-radius: 50%;
+        }
+    }
+}

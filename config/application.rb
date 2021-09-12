@@ -18,5 +18,20 @@ module Votvot
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+  
+    ## devise : 이메일 인증 설정
+
+    config.action_mailer.delivery_method = :smtp
+    config.action_mailer.perform_deliveries = true
+    config.action_mailer.default_url_options = { host: 'http://...' }
+    ActionMailer::Base.smtp_settings = {
+      :address              => 'smtp.gmail.com',
+      :domain               => 'mail.google.com',
+      :port                 => 587,
+      :user_name            => ENV["GOOGLE_EMAIL_ID"],
+      :password             => ENV["GOOGLE_EMAIL_PASSWORD"],
+      :authentication       => 'login',
+      :enable_starttls_auto => true
+    }
   end
 end

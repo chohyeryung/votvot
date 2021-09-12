@@ -1,0 +1,46 @@
+.new {
+    margin-top: 60px;
+
+    .title {
+        font-size: 2em;
+    }
+
+    .content {
+        font-size: 1.3em;
+    }
+
+    .submit_btn {
+        width: auto;
+        background-color: #60f;
+        color: #fff;
+        padding: 15px 30px;
+        border-radius: 30px;
+        float: right;
+        margin-right: 8%;
+        margin-top: 80px;
+    }
+
+    .subject_con {
+        width: 100%;
+        margin-top: 80px;
+
+        input {
+            height: 55px;
+        }
+
+        .subject_input {
+            width: 80%;
+            text-indent: 20px;
+            font-size: 1.2em;
+        }
+        
+        .create_btn {
+            width: 10%;
+            margin-left: 20px;
+            background-color: #fff;
+            color: #60f;
+            border: 1px solid #60f;
+            border-radius: 30px;
+        }
+    }
+}

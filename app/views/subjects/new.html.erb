@@ -1,0 +1,13 @@
+
+<div class="new container">
+    <h1>Step 2</h1>
+    <!-- message 말고 subject id 여부에 따라 수정 생성 버튼 나누기 -->
+
+    <% @subjects.each do |subject| %>
+        <%= render 'form', subject: subject, message: '수정' %>
+    <% end %>
+
+    <%= render 'form', subject: @subject, message: '생성' %>
+
+    <%= link_to '완료', "/posts/#{@post_id}", class: 'submit_btn' %>
+</div>

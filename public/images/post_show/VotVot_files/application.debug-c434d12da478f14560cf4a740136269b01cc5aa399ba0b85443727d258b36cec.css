@@ -1,0 +1,818 @@
+/* line 1, app/assets/stylesheets/dropdown.scss */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* line 6, app/assets/stylesheets/dropdown.scss */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 3;
+  text-align: center;
+}
+
+/* line 15, app/assets/stylesheets/dropdown.scss */
+.dropdown-content p {
+  margin-top: 15px;
+}
+
+/* line 20, app/assets/stylesheets/dropdown.scss */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+/* line 1, app/assets/stylesheets/footer.scss */
+.footer {
+  background-color: #f6f6f6;
+  text-align: center;
+}
+
+/* line 5, app/assets/stylesheets/footer.scss */
+.footer .footerItem {
+  padding: 5vh 0 5vh 0;
+}
+
+/* line 8, app/assets/stylesheets/footer.scss */
+.footer .footerItem a {
+  color: black;
+  text-decoration-line: none;
+}
+
+/* line 12, app/assets/stylesheets/footer.scss */
+.footer .footerItem a:hover {
+  color: black;
+}
+
+/* line 16, app/assets/stylesheets/footer.scss */
+.footer .footerItem img {
+  margin-bottom: 3vh;
+}
+
+/* line 21, app/assets/stylesheets/footer.scss */
+.footer .footerLink {
+  color: #909090;
+}
+
+/* line 27, app/assets/stylesheets/footer.scss */
+.footer .footerAddress {
+  color: gray;
+}
+/* line 1, app/assets/stylesheets/header.scss */
+.header {
+  padding: 3vh 13vh 3vh 13vh;
+  box-shadow: 0 3px 5px #DCDCDC;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 8, app/assets/stylesheets/header.scss */
+.header a {
+  margin: 0 3vh 0 1vh;
+  color: black;
+  text-decoration-line: none;
+}
+
+/* line 13, app/assets/stylesheets/header.scss */
+.header a:hover {
+  color: #6600ff;
+}
+
+/* line 17, app/assets/stylesheets/header.scss */
+.header .headerLeft, .header .headerRight {
+  width: 300px;
+}
+
+/* line 20, app/assets/stylesheets/header.scss */
+.header .headerRight {
+  text-align: right;
+}
+
+/* line 23, app/assets/stylesheets/header.scss */
+.header .headerRight button {
+  background-color: white;
+  border: none;
+}
+
+/* line 28, app/assets/stylesheets/header.scss */
+.header .headerRight .profile {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+/* line 1, app/assets/stylesheets/landing.scss */
+.landingContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 15vh;
+  margin-bottom: 15vh;
+}
+
+/* line 8, app/assets/stylesheets/landing.scss */
+.landingContainer .item {
+  width: 45%;
+  margin-top: 25vh;
+  margin-left: 4vh;
+  margin-right: 4vh;
+}
+
+/* line 14, app/assets/stylesheets/landing.scss */
+.landingContainer .item img {
+  width: 80%;
+  margin: 0 10% 0 10%;
+}
+
+/* line 19, app/assets/stylesheets/landing.scss */
+.landingContainer .item .topic {
+  font-size: 4vw;
+}
+
+/* line 23, app/assets/stylesheets/landing.scss */
+.landingContainer .item .detail {
+  font-weight: lighter;
+  margin-top: 3vh;
+  font-size: 1.5vw;
+  color: #727272;
+}
+
+/* line 31, app/assets/stylesheets/landing.scss */
+.landingContainer .item:nth-child(even) {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* line 35, app/assets/stylesheets/landing.scss */
+.landingContainer .item:nth-child(1), .landingContainer .item:nth-child(2) {
+  margin-top: 5vh;
+}
+/* line 3, app/assets/stylesheets/login.scss */
+.userCon .login_form {
+  font-size: 1.3em;
+}
+
+/* line 7, app/assets/stylesheets/login.scss */
+.userCon .login_form label {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+/* line 12, app/assets/stylesheets/login.scss */
+.userCon .login_form input {
+  width: 21.6vw;
+  padding: 2%;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: #cacaca;
+  text-indent: 30px;
+}
+
+/* line 21, app/assets/stylesheets/login.scss */
+.userCon .login_form .email {
+  background-image: url(/images/user.png);
+  background-position: 5px center;
+  background-size: 20px;
+  background-repeat: no-repeat;
+}
+
+/* line 28, app/assets/stylesheets/login.scss */
+.userCon .login_form .password {
+  background-image: url(/images/lock.png);
+  background-position: 5px center;
+  background-size: 22px;
+  background-repeat: no-repeat;
+}
+
+/* line 35, app/assets/stylesheets/login.scss */
+.userCon .login_form .check_box {
+  width: auto;
+}
+
+/* line 39, app/assets/stylesheets/login.scss */
+.userCon .login_form .check {
+  margin-left: 8px;
+  margin-top: 5px;
+  color: #9f9f9f;
+}
+
+/* line 45, app/assets/stylesheets/login.scss */
+.userCon .login_form .submit {
+  width: 17.2vw;
+  border-radius: 20px;
+  border: 1px solid #60f;
+  color: #60f;
+  background-color: transparent;
+  margin: 25% 5% 0 10%;
+  cursor: pointer;
+  text-indent: 0;
+}
+
+/* line 56, app/assets/stylesheets/login.scss */
+.userCon .login_form .submit:hover {
+  background-color: #60f;
+  color: #ffffff;
+}
+
+/* line 61, app/assets/stylesheets/login.scss */
+.userCon .login_form .go_regi {
+  text-align: center;
+  margin-top: 20px;
+  color: #000;
+  text-decoration: none;
+}
+/* line 3, app/assets/stylesheets/my_page.scss */
+.myPage .banner {
+  width: 100vw;
+  height: 200px;
+  margin-left: calc(-50vw + 50%);
+  background-color: #ffedbc;
+  position: relative;
+  z-index: -1;
+}
+
+/* line 12, app/assets/stylesheets/my_page.scss */
+.myPage .user {
+  display: grid;
+  grid-template-columns: 30% auto;
+  justify-items: center;
+}
+
+/* line 19, app/assets/stylesheets/my_page.scss */
+.myPage .user .userInfo .info .box {
+  width: 150px;
+  height: 150px;
+  border-radius: 70%;
+  overflow: hidden;
+  box-shadow: 0 3px 5px #DCDCDC;
+  background: #ffbc00;
+  transform: translateY(-60px);
+}
+
+/* line 28, app/assets/stylesheets/my_page.scss */
+.myPage .user .userInfo .info .box .img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* line 35, app/assets/stylesheets/my_page.scss */
+.myPage .user .userInfo .info .text {
+  margin-top: -30px;
+}
+
+/* line 39, app/assets/stylesheets/my_page.scss */
+.myPage .user .userInfo .info .text .nickname {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* line 44, app/assets/stylesheets/my_page.scss */
+.myPage .user .userInfo .info .text .email {
+  color: #949494;
+  margin-top: 2vh;
+}
+
+/* line 51, app/assets/stylesheets/my_page.scss */
+.myPage .user .userInfo button {
+  margin-top: 2vh;
+  width: 65%;
+  height: 40px;
+  background: #e3e3e3;
+  border-radius: 27px;
+  border: none;
+}
+
+/* line 59, app/assets/stylesheets/my_page.scss */
+.myPage .user .userInfo button:hover {
+  background: #a9a9a9;
+}
+
+/* line 71, app/assets/stylesheets/my_page.scss */
+.myPage .field {
+  margin-top: 3vh;
+}
+
+/* line 75, app/assets/stylesheets/my_page.scss */
+.myPage .actions {
+  display: inline;
+  margin-right: 1.5vw;
+}
+/* line 1, app/assets/stylesheets/new_post_subject.scss */
+.new {
+  margin-top: 60px;
+}
+
+/* line 4, app/assets/stylesheets/new_post_subject.scss */
+.new .title {
+  font-size: 2em;
+}
+
+/* line 8, app/assets/stylesheets/new_post_subject.scss */
+.new .content {
+  font-size: 1.3em;
+}
+
+/* line 12, app/assets/stylesheets/new_post_subject.scss */
+.new .submit_btn {
+  width: auto;
+  background-color: #60f;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  float: right;
+}
+
+/* line 21, app/assets/stylesheets/new_post_subject.scss */
+.new .subject_con {
+  width: 100%;
+}
+
+/* line 24, app/assets/stylesheets/new_post_subject.scss */
+.new .subject_con input {
+  height: 55px;
+}
+
+/* line 28, app/assets/stylesheets/new_post_subject.scss */
+.new .subject_con .subject_input {
+  width: 80%;
+  text-indent: 20px;
+  font-size: 1.2em;
+}
+
+/* line 34, app/assets/stylesheets/new_post_subject.scss */
+.new .subject_con .create_btn {
+  width: 10%;
+  margin-left: 20px;
+}
+/* line 3, app/assets/stylesheets/post_form.scss */
+.post_form input {
+  width: 100%;
+  outline: 0;
+  border-width: 0 0 1px;
+  border-color: #cacaca;
+  text-indent: 5px;
+}
+
+/* line 10, app/assets/stylesheets/post_form.scss */
+.post_form textarea {
+  width: 100%;
+  outline: 0;
+  border-width: 0;
+  text-indent: 5px;
+}
+
+/* line 17, app/assets/stylesheets/post_form.scss */
+.post_form .btn_group {
+  text-align: right;
+  margin-top: 50px;
+}
+
+/* line 21, app/assets/stylesheets/post_form.scss */
+.post_form .btn_group .submit_btn {
+  width: auto;
+  background-color: #60f;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+}
+
+/* line 29, app/assets/stylesheets/post_form.scss */
+.post_form .btn_group .cancel_btn {
+  width: auto;
+  background-color: #fff;
+  color: #60f;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: 1px solid #60f;
+}
+/* line 1, app/assets/stylesheets/post_show.scss */
+.post_show {
+  background-color: #f6f6f6;
+}
+
+/* line 4, app/assets/stylesheets/post_show.scss */
+.post_show .post {
+  background-color: white;
+  margin: 0vh 15vh;
+  padding: 0vh 10vh;
+  padding-bottom: 20vh;
+}
+
+/* line 13, app/assets/stylesheets/post_show.scss */
+.post_show .post .hot {
+  float: right;
+}
+
+/* line 16, app/assets/stylesheets/post_show.scss */
+.post_show .post .hot .like_btn {
+  background-position: center;
+  background-size: 100%;
+  width: 20px;
+  height: 28px;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+}
+
+/* line 25, app/assets/stylesheets/post_show.scss */
+.post_show .post .hot .full_hot {
+  background-image: url(/images/post_show/full_hot.png);
+}
+
+/* line 29, app/assets/stylesheets/post_show.scss */
+.post_show .post .hot .empty_hot {
+  background-image: url(/images/post_show/empty_hot.png);
+}
+
+/* line 36, app/assets/stylesheets/post_show.scss */
+.post_show .post .subjects .sub_box {
+  border: solid 1px black;
+}
+
+/* line 41, app/assets/stylesheets/post_show.scss */
+.post_show .post .submit_btn {
+  width: auto;
+  background-color: #60f;
+  color: #fff;
+  padding: 15px 30px;
+  border-radius: 30px;
+  border: none;
+  float: right;
+}
+
+/* line 52, app/assets/stylesheets/post_show.scss */
+.post_show .comments {
+  background-color: white;
+  margin: 0vh 15vh;
+  padding: 0vh 10vh;
+}
+/* line 1, app/assets/stylesheets/posts.scss */
+.banner_img {
+  width: 100%;
+}
+
+/* line 5, app/assets/stylesheets/posts.scss */
+.first_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* line 11, app/assets/stylesheets/posts.scss */
+.title {
+  margin: 7.6vh 9.4vw 5.3vh 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* line 17, app/assets/stylesheets/posts.scss */
+.write_btn {
+  background-color: #60f;
+  color: #fff;
+  right: 90px;
+  top: 500px;
+  padding: 15px 30px;
+  border-radius: 30px;
+  position: fixed;
+}
+
+/* line 27, app/assets/stylesheets/posts.scss */
+.write_btn:hover {
+  color: #60f;
+  background-color: white;
+  border: 1px solid #60f;
+}
+
+/* line 35, app/assets/stylesheets/posts.scss */
+.post_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+/* line 41, app/assets/stylesheets/posts.scss */
+.post_container .post {
+  box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+  border-top-right-radius: 10px;
+  width: 17vw;
+  height: auto;
+  text-align: center;
+  position: relative;
+}
+
+/* line 49, app/assets/stylesheets/posts.scss */
+.post_container .post .photo_con {
+  width: 100%;
+  height: 13.4vh;
+  object-fit: cover;
+  border-top-right-radius: 10px;
+}
+
+/* line 55, app/assets/stylesheets/posts.scss */
+.post_container .post .text_con {
+  padding: 1.2vw;
+  text-align: left;
+}
+
+/* line 59, app/assets/stylesheets/posts.scss */
+.post_container .post .text_con h5 {
+  font-size: 1.5em;
+}
+
+/* line 63, app/assets/stylesheets/posts.scss */
+.post_container .post .text_con h6 {
+  font-size: 1.2em;
+}
+
+/* line 67, app/assets/stylesheets/posts.scss */
+.post_container .post .text_con .info_con {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 10px;
+}
+
+/* line 73, app/assets/stylesheets/posts.scss */
+.post_container .post .text_con .info_con h6 {
+  font-size: 1em;
+}
+
+/* line 77, app/assets/stylesheets/posts.scss */
+.post_container .post .text_con .info_con .count_con {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* line 82, app/assets/stylesheets/posts.scss */
+.post_container .post .text_con .info_con .count_con .like_con .like_icon {
+  width: 1.3vw;
+  height: 1.5vw;
+}
+
+/* line 89, app/assets/stylesheets/posts.scss */
+.post_container .post .text_con .info_con .count_con .comment_con .comment_icon {
+  width: 1.5vw;
+  height: 1.2vw;
+}
+
+/* line 104, app/assets/stylesheets/posts.scss */
+.digg_pagination {
+  background: white;
+  cursor: default;
+  display: flex;
+  justify-content: center;
+  /* self-clearing method: */
+}
+
+/* line 112, app/assets/stylesheets/posts.scss */
+.digg_pagination a, .digg_pagination span, .digg_pagination em {
+  padding: 0.2em 0.5em;
+  display: block;
+  float: left;
+  margin-right: 1px;
+}
+
+/* line 119, app/assets/stylesheets/posts.scss */
+.digg_pagination .disabled {
+  color: #999999;
+  border: 1px solid #dddddd;
+}
+
+/* line 124, app/assets/stylesheets/posts.scss */
+.digg_pagination .current {
+  font-style: normal;
+  font-weight: bold;
+  background: #2e6ab1;
+  color: white;
+  border: 1px solid #2e6ab1;
+}
+
+/* line 132, app/assets/stylesheets/posts.scss */
+.digg_pagination a {
+  text-decoration: none;
+  color: #105cb6;
+  border: 1px solid #9aafe5;
+}
+
+/* line 136, app/assets/stylesheets/posts.scss */
+.digg_pagination a:hover, .digg_pagination a:focus {
+  color: #000033;
+  border-color: #000033;
+}
+
+/* line 141, app/assets/stylesheets/posts.scss */
+.digg_pagination .page_info {
+  background: #2e6ab1;
+  color: white;
+  padding: 0.4em 0.6em;
+  width: 22em;
+  margin-bottom: 0.3em;
+  text-align: center;
+}
+
+/* line 148, app/assets/stylesheets/posts.scss */
+.digg_pagination .page_info b {
+  color: #000033;
+  background: #6aa6ed;
+  padding: 0.1em 0.25em;
+}
+
+/* line 154, app/assets/stylesheets/posts.scss */
+.digg_pagination:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+/* line 162, app/assets/stylesheets/posts.scss */
+* html .digg_pagination {
+  height: 1%;
+}
+
+/* line 166, app/assets/stylesheets/posts.scss */
+*:first-child + html .digg_pagination {
+  overflow: hidden;
+}
+/* line 6, app/assets/stylesheets/scaffolds.scss */
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+}
+
+/* line 12, app/assets/stylesheets/scaffolds.scss */
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+/* line 17, app/assets/stylesheets/scaffolds.scss */
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* line 30, app/assets/stylesheets/scaffolds.scss */
+th {
+  padding-bottom: 5px;
+}
+
+/* line 33, app/assets/stylesheets/scaffolds.scss */
+td {
+  padding: 0 5px 7px;
+}
+
+/* line 36, app/assets/stylesheets/scaffolds.scss */
+div.field,
+div.actions {
+  margin-bottom: 10px;
+}
+
+/* line 40, app/assets/stylesheets/scaffolds.scss */
+#notice {
+  color: green;
+}
+
+/* line 43, app/assets/stylesheets/scaffolds.scss */
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+/* line 48, app/assets/stylesheets/scaffolds.scss */
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+/* line 55, app/assets/stylesheets/scaffolds.scss */
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px -7px 0;
+  background-color: #c00;
+  color: #fff;
+}
+
+/* line 64, app/assets/stylesheets/scaffolds.scss */
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* line 68, app/assets/stylesheets/scaffolds.scss */
+label {
+  display: block;
+}
+/* line 1, app/assets/stylesheets/sign_up.scss */
+.userCon {
+  width: 28.4vw;
+  height: 64.3vh;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.16);
+  border: solid 1px #cecece;
+  background-color: #fff;
+  margin: 0 auto;
+  position: relative;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  margin-bottom: 15vh;
+  margin-top: 15vh;
+}
+
+/* line 18, app/assets/stylesheets/sign_up.scss */
+.userCon h2 {
+  color: #000000;
+  font-size: 2em;
+}
+
+/* line 23, app/assets/stylesheets/sign_up.scss */
+.userCon .sign_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.3em;
+}
+
+/* line 30, app/assets/stylesheets/sign_up.scss */
+.userCon .sign_form label {
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+/* line 35, app/assets/stylesheets/sign_up.scss */
+.userCon .sign_form .required {
+  font-size: 1em;
+  color: red;
+}
+
+/* line 40, app/assets/stylesheets/sign_up.scss */
+.userCon .sign_form input {
+  width: 21.6vw;
+  padding: 2%;
+  border: 1px solid #cacaca;
+  border-radius: 3px;
+}
+
+/* line 47, app/assets/stylesheets/sign_up.scss */
+.userCon .sign_form .pass_con {
+  margin-top: 5px;
+}
+
+/* line 51, app/assets/stylesheets/sign_up.scss */
+.userCon .sign_form .submit {
+  width: 17.2vw;
+  border-radius: 20px;
+  border: 1px solid #60f;
+  color: #60f;
+  background-color: transparent;
+  margin: 10% 5% 0 10%;
+}
+
+/* line 60, app/assets/stylesheets/sign_up.scss */
+.userCon .sign_form .submit:hover {
+  background-color: #60f;
+  color: #ffffff;
+}
+
+/* line 69, app/assets/stylesheets/sign_up.scss */
+.sign_img {
+  width: 60px;
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translate(-50%, -26%);
+  z-index: 1;
+  background-color: white;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+/*# sourceMappingURL=application.css-80d91efbcb91ea7bd68a53f38d946e810988162c3674666a0f71b00685890549.map */
